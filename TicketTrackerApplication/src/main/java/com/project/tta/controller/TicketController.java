@@ -74,8 +74,7 @@ public class TicketController {
  		existingTicket.setId(id);
  		existingTicket.setTitle(ticket.getTitle());
  		existingTicket.setDescript(ticket.getDescript());
- 		existingTicket.setCreateon(LocalDate.now());
- 		
+ 		existingTicket.setContent(ticket.getContent());
 
  		// save updated ticket object
  		ticketService.updateTicket(existingTicket);
