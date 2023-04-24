@@ -1,6 +1,8 @@
 package com.project.tta.controller;
 
 
+import java.time.LocalDate;
+
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
@@ -72,7 +74,8 @@ public class TicketController {
  		existingTicket.setId(id);
  		existingTicket.setTitle(ticket.getTitle());
  		existingTicket.setDescript(ticket.getDescript());
- 		existingTicket.setCreateon(ticket.getCreateon());
+ 		existingTicket.setCreateon(LocalDate.now());
+ 		
 
  		// save updated ticket object
  		ticketService.updateTicket(existingTicket);
